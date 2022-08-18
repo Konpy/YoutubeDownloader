@@ -24,7 +24,7 @@ def Video_links():
             #Video Information
             Output.insert(END,f"\nDownloading:\n {good_apple.title}")
             time.sleep(2)
-            good_apple.streams.get_highest_resolution().download("C:/Users/danka/Downloads",f"{good_apple.title}.mp4")
+            good_apple.streams.get_highest_resolution().download("FILEPATH",f"{good_apple.title}.mp4")
             Output.insert(END,"\nDone loading\n")
         except: 
             Output.insert(END, "\nError raised\n")
@@ -38,7 +38,7 @@ def Audio_links():
 
         #Video Information
         Output.insert(END,f"Downloading:\n {good_apple.title}")
-        good_apple.streams.get_audio_only().download("C:/Users/danka/Downloads",f"{good_apple.title}.mp3")
+        good_apple.streams.get_audio_only().download("FILEPATH",f"{good_apple.title}.mp3")
         Output.insert(END,"\nDone loading")
     except:
         Output.insert(END, "\nError raised\n")
